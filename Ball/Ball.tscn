@@ -17,6 +17,8 @@ physics_material_override = SubResource( 2 )
 gravity_scale = 0.0
 linear_damp = 0.0
 script = ExtResource( 1 )
+wobble_max = null
+distort_effect = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -29,5 +31,7 @@ texture = ExtResource( 2 )
 [node name="Highlight" type="Sprite" parent="Images"]
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 3 )
+
+[node name="Tween" type="Tween" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_on_Ball_body_entered"]
